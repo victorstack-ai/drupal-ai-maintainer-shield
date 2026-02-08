@@ -1,12 +1,27 @@
 <?php
 
+/**
+ * File for Analyzer class.
+ */
+
 namespace DrupalMaintainerShield;
 
-class Analyzer {
+/**
+ * Class Analyzer
+ *
+ * Analyzes patches for security signal.
+ */
+class Analyzer
+{
     /**
      * Analyzes a patch string for security signal vs noise.
+     *
+     * @param string $patch The patch content.
+     *
+     * @return array The analysis results.
      */
-    public function analyze(string $patch): array {
+    public function analyze(string $patch): array
+    {
         $score = 50; // Neutral starting point
         $findings = [];
         $noiseSignals = 0;
